@@ -1,0 +1,109 @@
+body{
+    margin: 0;
+    overflow: hidden;
+    background: black;
+}
+.day{
+    position: relative;
+    overflow: hidden;
+
+    width: 100%;
+    height:500px;
+
+    background: steelblue;
+    box-shadow: 0 -400px 300px -300px orangered inset;
+
+    animation-name: sky;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+.sun{
+    position: absolute;
+    left: 0;
+    bottom: -30%;
+    
+    margin-top: 0;
+    margin-left: -2.5em;
+
+    height: 10em;
+    width: 10em;
+
+    background: orangered;
+    border-radius: 50%;
+    box-shadow: 0 0 20px orange;
+
+    animation-name: sun;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+img{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: -270px;
+    left: 0;
+
+    background: url(../img/grass.webp)  center bottom;
+}
+
+@keyframes day{
+    0% {
+        background-color: darkslateblue;;
+    }
+    50% {
+        background-color: skyblue;
+        box-shadow: 0 -400px 300px -300px steelblue inset;
+    }
+    85%{
+        background: darkslateblue;
+        box-shadow: 0 -400px 300px -300px orangered inset;
+    }
+    100% {
+        background-color: darkslateblue;
+    }
+}
+@keyframes sun {
+    0% {
+    }
+    10%{
+        margin-left: -4.5em;
+    }
+    20%{
+        margin-left: -5.5em;
+        background: orange;
+    }
+    30%{
+        margin-left: -6em;
+    }
+    40%{
+        margin-left: -4.5em;
+        background: gold;
+        box-shadow: 0 0 35px gold;
+    }
+    50%{
+        left: 50%;
+        bottom: 75%;
+        width: 5em;
+        height: 5em;
+        margin-left: -2.5em;
+    }
+    60%{
+        margin-left: 1.5em;
+    }
+    70%{
+        margin-left: 3.5em;
+    }
+    80%{
+        margin-left: 2.5em;
+    }
+    90%{
+        margin-left: 1em;
+    }
+    100% {
+        left: 98%;
+        margin-left: -2.5em;
+    }
+}
